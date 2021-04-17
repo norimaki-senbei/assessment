@@ -27,7 +27,7 @@ userNameInput.onkeydown = event => {
     assessmentButton.onclick();
     }
 };
-  
+
 
 //assessmentButton.onclick = function(){
 assessmentButton.onclick = () => {
@@ -37,10 +37,10 @@ assessmentButton.onclick = () => {
         return;
     }
     console.log(userName);
-    
+
     // 診断結果表示エリアの作成
     removeAllChildren(resultDivided);
-    
+
     // 診断結果表示エリアの作成
     const header = document.createElement('h3');
     header.innerText = '診断結果';
@@ -58,12 +58,12 @@ assessmentButton.onclick = () => {
     'https://twitter.com/intent/tweet?button_hashtag=' +
     encodeURIComponent('あなたのいいところ') +
     '&ref_src=twsrc%5Etfw';
-    
+
     anchor.setAttribute('href', hrefValue);
     anchor.className = 'twitter-hashtag-button';
     anchor.setAttribute('data-text', result);
     anchor.innerText = 'Tweet #あなたのいいところ';
-    
+
     tweetDivided.appendChild(anchor);
 
     const script = document.createElement('script');
